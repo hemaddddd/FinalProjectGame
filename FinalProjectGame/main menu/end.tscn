@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpkquncdsgt4f"]
+[gd_scene load_steps=4 format=3 uid="uid://dpkquncdsgt4f"]
 
 [ext_resource type="Script" path="res://main menu/end.gd" id="1_w7j6u"]
+[ext_resource type="FontFile" uid="uid://whjeinj0y5gd" path="res://Fluox___.ttf" id="2_sfp5y"]
+[ext_resource type="Theme" uid="uid://bf1gcjax54hvg" path="res://theme/theme.tres" id="3_s0ayu"]
 
 [node name="end" type="Control"]
 layout_mode = 3
@@ -19,6 +21,7 @@ anchor_bottom = 1.0
 offset_bottom = -312.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_sfp5y")
 theme_override_font_sizes/font_size = 90
 text = "You Have Escaped"
 horizontal_alignment = 1
@@ -30,6 +33,7 @@ offset_left = 321.0
 offset_top = 303.0
 offset_right = 501.0
 offset_bottom = 358.0
+theme = ExtResource("3_s0ayu")
 text = "Play again?"
 
 [node name="quit" type="Button" parent="."]
@@ -38,6 +42,7 @@ offset_left = 616.0
 offset_top = 303.0
 offset_right = 796.0
 offset_bottom = 358.0
+theme = ExtResource("3_s0ayu")
 text = "Quit"
 
 [connection signal="pressed" from="replay" to="." method="_on_replay_pressed"]
