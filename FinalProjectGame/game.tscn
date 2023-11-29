@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dv6istj3sf1e4"]
+[gd_scene load_steps=11 format=3 uid="uid://dv6istj3sf1e4"]
 
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_l417l"]
+[ext_resource type="Texture2D" uid="uid://dj5dlxx7dgqbh" path="res://New Piskel (3).png" id="2_an061"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bcij"]
 texture = ExtResource("1_l417l")
@@ -227,6 +228,17 @@ texture = ExtResource("1_l417l")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_uqq0k")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n4rwu"]
+texture = ExtResource("2_an061")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_5jydw"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_n4rwu")
+
 [node name="game" type="Node2D"]
 
 [node name="background" type="TileMap" parent="."]
@@ -243,3 +255,8 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 0, 1, 65536, 2, 2, 65536, 2, 3, 
 tile_set = SubResource("TileSet_pgumy")
 format = 2
 layer_0/tile_data = PackedInt32Array(2490388, 0, 3, 2490389, 0, 3, 2490390, 0, 3, 2490391, 0, 3, 2490392, 0, 3, 2490393, 0, 3, 2490394, 0, 3, 2490395, 0, 3, 2490396, 0, 3, 2490397, 0, 3, 2490398, 0, 3, 2490405, 0, 3, 2490406, 0, 3, 2490407, 0, 3, 2490408, 0, 3, 2490409, 0, 3, 2490410, 0, 3, 2490411, 0, 3, 2490412, 0, 3, 2490413, 0, 3, 2490414, 0, 3, 2490415, 0, 3, 2490416, 0, 3, 2490417, 0, 3, 2490418, 0, 3, 2490419, 0, 3, 2228226, 0, 3, 2228227, 0, 3, 2228228, 0, 3, 2228229, 0, 3)
+
+[node name="exit" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_5jydw")
+format = 2
+layer_0/tile_data = PackedInt32Array(1310787, 0, 0)

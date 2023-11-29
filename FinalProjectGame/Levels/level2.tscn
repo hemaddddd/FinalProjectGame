@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://7vd68ue7mstl"]
+[gd_scene load_steps=11 format=3 uid="uid://7vd68ue7mstl"]
 
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_dxa30"]
+[ext_resource type="Texture2D" uid="uid://dj5dlxx7dgqbh" path="res://New Piskel (3).png" id="2_hx2tw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4oatc"]
 texture = ExtResource("1_dxa30")
@@ -237,6 +238,17 @@ texture = ExtResource("1_dxa30")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_4de5a")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d88es"]
+texture = ExtResource("2_hx2tw")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_ntfh2"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_d88es")
+
 [node name="level2" type="Node2D"]
 
 [node name="background" type="TileMap" parent="."]
@@ -253,3 +265,8 @@ layer_0/tile_data = PackedInt32Array(524289, 65536, 0, 524290, 65536, 0, 524291,
 tile_set = SubResource("TileSet_vbl5f")
 format = 2
 layer_0/tile_data = PackedInt32Array(524299, 0, 3, 524300, 0, 3, 524301, 0, 3, 524302, 0, 3, 524303, 0, 3, 524304, 0, 3, 524305, 0, 3, 589872, 0, 3, 589873, 0, 3, 589874, 0, 3, 589875, 0, 3, 589876, 0, 3, 1572927, 0, 3, 1572928, 0, 3, 1572929, 0, 3, 1572930, 0, 3, 1572931, 0, 3, 1572901, 0, 3, 1572902, 0, 3, 1572903, 0, 3, 1703953, 0, 3, 1703954, 0, 3, 1703955, 0, 3, 2490371, 0, 3, 2490372, 0, 3, 2490373, 0, 3, 2490374, 0, 3, 2490375, 0, 3, 2621478, 0, 3, 2621479, 0, 3, 2621480, 0, 3, 2621481, 0, 3, 2621482, 0, 3, 2621483, 0, 3, 2621484, 0, 3, 2621485, 0, 3, 2621486, 0, 3, 2621487, 0, 3, 2621488, 0, 3, 2621489, 0, 3)
+
+[node name="exit" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_ntfh2")
+format = 2
+layer_0/tile_data = PackedInt32Array(2228295, 0, 0)
