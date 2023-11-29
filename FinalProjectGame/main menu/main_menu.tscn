@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://sdkjdambd0jy"]
+
+[ext_resource type="Script" path="res://main menu/main_menu.gd" id="1_r6vk1"]
+
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6vk1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 90
+text = "Break out!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play" type="Button" parent="."]
+layout_mode = 1
+offset_left = 505.0
+offset_top = 320.0
+offset_right = 695.0
+offset_bottom = 365.0
+text = "Play"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 1
+offset_left = 506.0
+offset_top = 384.0
+offset_right = 696.0
+offset_bottom = 429.0
+text = "Quit"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
