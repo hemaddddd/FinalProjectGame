@@ -15,6 +15,7 @@ Features
 Assets, or resources used
 - cave tile set by FOX:
 https://gtkampos.itch.io/cave-tileset
+- fluoxetine by apostrophic labs: https://www.dafont.com/fluoxetine.font?l[]=10&l[]=1
 
 ## References
 
