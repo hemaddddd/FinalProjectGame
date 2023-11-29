@@ -13,7 +13,7 @@ Level design, assets,
 ## Implementation
 Features
 Assets, or resources used
-cave tile set by FOX:
+- cave tile set by FOX:
 https://gtkampos.itch.io/cave-tileset
 
 ## References
