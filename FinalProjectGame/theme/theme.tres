@@ -1,0 +1,71 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bf1gcjax54hvg"]
+
+[ext_resource type="FontFile" uid="uid://whjeinj0y5gd" path="res://Fluox___.ttf" id="1_niphw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g476d"]
+bg_color = Color(0.2, 0.298039, 0.12549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.152941, 0.227451, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mti5y"]
+bg_color = Color(0.2, 0.298039, 0.12549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.152941, 0.227451, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p75j"]
+bg_color = Color(0.27451, 0.403922, 0.180392, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.152941, 0.227451, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plq75"]
+bg_color = Color(0.2, 0.298039, 0.12549, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.152941, 0.227451, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uob2g"]
+bg_color = Color(0.12549, 0.196078, 0.0745098, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.152941, 0.227451, 0.0980392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Button/fonts/font = ExtResource("1_niphw")
+Button/styles/disabled = SubResource("StyleBoxFlat_g476d")
+Button/styles/focus = SubResource("StyleBoxFlat_mti5y")
+Button/styles/hover = SubResource("StyleBoxFlat_0p75j")
+Button/styles/normal = SubResource("StyleBoxFlat_plq75")
+Button/styles/pressed = SubResource("StyleBoxFlat_uob2g")
