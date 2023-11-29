@@ -18,5 +18,5 @@ Assets, or resources used
 
 ## Future Development
 
-# Created by: Group Name
+# Created by: Team Oout
 He Ma, Josh Mom, Antony Liu
