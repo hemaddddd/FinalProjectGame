@@ -1,0 +1,142 @@
+[gd_scene load_steps=19 format=3 uid="uid://0sjsp1wiw2qb"]
+
+[ext_resource type="Script" path="res://Enemies/eyeball.gd" id="1_p4cbx"]
+[ext_resource type="Texture2D" uid="uid://rxjgtff8bdvq" path="res://Assets/Flying Eye 2D Pixel Art/Flying Eye 2D Pixel Art/Sprites/ATTACK.png" id="2_1yke1"]
+[ext_resource type="Texture2D" uid="uid://gy0o22yhlwd2" path="res://Assets/Flying Eye 2D Pixel Art/Flying Eye 2D Pixel Art/Sprites/MOVE.png" id="3_3kt6p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jc04"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mjnf"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_151go"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2n4t"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qwrw"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0ywn"]
+atlas = ExtResource("2_1yke1")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yy2ya"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b56jo"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvx24"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xcsl"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqx4d"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txwhq"]
+atlas = ExtResource("3_3kt6p")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6trhg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jc04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mjnf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_151go")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2n4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qwrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0ywn")
+}],
+"loop": false,
+"name": &"Attacking",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"Dying",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yy2ya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b56jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvx24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xcsl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqx4d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txwhq")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdr6c"]
+size = Vector2(18, 19.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hs26v"]
+radius = 14.0357
+
+[node name="Eyeball" type="CharacterBody2D"]
+script = ExtResource("1_p4cbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -0.999996)
+scale = Vector2(0.266667, 0.26)
+sprite_frames = SubResource("SpriteFrames_6trhg")
+animation = &"Moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.125)
+shape = SubResource("RectangleShape2D_jdr6c")
+
+[node name="See" type="RayCast2D" parent="."]
+target_position = Vector2(0, 905)
+
+[node name="Attack" type="Area2D" parent="."]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack"]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_hs26v")
+
+[node name="Timer" type="Timer" parent="Attack"]
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="Attack" to="." method="_on_attack_body_entered"]

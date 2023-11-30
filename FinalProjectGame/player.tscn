@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cm2g7um53ffxb"]
+[gd_scene load_steps=24 format=3 uid="uid://cm2g7um53ffxb"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_cqwbq"]
 [ext_resource type="Script" path="res://StateMachine.gd" id="2_pmm5a"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Moving.gd" id="4_t4f30"]
 [ext_resource type="Script" path="res://Jumping.gd" id="5_cm00l"]
 [ext_resource type="Script" path="res://Falling.gd" id="6_vyr1v"]
+[ext_resource type="AudioStream" uid="uid://t2k0urn2vox0" path="res://Assets/380471__acebrian__jump.wav" id="8_wdsft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3ksh"]
 atlas = ExtResource("2_tlryf")
@@ -126,7 +127,7 @@ script = ExtResource("1_cqwbq")
 scale = Vector2(0.375, 0.390625)
 sprite_frames = SubResource("SpriteFrames_oorv1")
 animation = &"Idle"
-frame_progress = 0.49741
+frame_progress = 0.70605
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.25)
@@ -143,6 +144,10 @@ script = ExtResource("4_t4f30")
 
 [node name="Jumping" type="Node" parent="StateMachine"]
 script = ExtResource("5_cm00l")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="StateMachine/Jumping"]
+stream = ExtResource("8_wdsft")
+volume_db = -20.613
 
 [node name="Falling" type="Node" parent="StateMachine"]
 script = ExtResource("6_vyr1v")
