@@ -17,6 +17,7 @@ Assets, or resources used
 https://gtkampos.itch.io/cave-tileset
 - fluoxetine by apostrophic labs: https://www.dafont.com/fluoxetine.font?l[]=10&l[]=1
 - art for menu by Joshua Mom
+- sky bg from free game assets https://free-game-assets.itch.io/free-sky-with-clouds-background-pixel-art-set?download#google_vignette
 ## References
 
 ## Future Development
