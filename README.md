@@ -20,6 +20,7 @@ https://gtkampos.itch.io/cave-tileset
 - sky bg from free game assets https://free-game-assets.itch.io/free-sky-with-clouds-background-pixel-art-set?download#google_vignette
 - sound effect by acebrian https://freesound.org/people/acebrian/sounds/380471/
 - music by komiku: https://freemusicarchive.org/music/Komiku/Poupis_incredible_adventures_/Komiku_-_Poupis_incredible_adventures__-_19_Cat_Race_Challenge/
+- https://freemusicarchive.org/music/Komiku/Poupis_incredible_adventures_/Komiku_-_Poupis_incredible_adventures__-_04_The_weekly_fair/
 ## References
 
 ## Future Development
