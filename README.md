@@ -31,4 +31,4 @@ Maybe add more levels and enenies and other game mechanics
 ## Game Playthrough
 - the video for the game walkthough is in the the folder FinalProjectGame in the respository 
 # Created by: Team Oout
-Josh Mom, Blane Anderson, Antony Liu, He Ma.
+Josh Mom, Blane Anderson, Antony Liu, He Ma. Blane: Player, Enemies, portal, and part of design, Josh: Level design, assets, portals, music, sound effects, and main_menu, Anthoney: Dialogue, story
