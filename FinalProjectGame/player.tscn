@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://Moving.gd" id="4_t4f30"]
 [ext_resource type="Script" path="res://Jumping.gd" id="5_cm00l"]
 [ext_resource type="Script" path="res://Falling.gd" id="6_vyr1v"]
-[ext_resource type="AudioStream" uid="uid://t2k0urn2vox0" path="res://Assets/380471__acebrian__jump.wav" id="8_wdsft"]
+[ext_resource type="AudioStream" path="res://Assets/380471__acebrian__jump.wav" id="8_wdsft"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3ksh"]
 atlas = ExtResource("2_tlryf")

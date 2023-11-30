@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://deexi8mbfhmou" path="res://Levels/exit_1.tscn" id="2_x2a3n"]
 [ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="3_1pwko"]
 [ext_resource type="PackedScene" uid="uid://gukopfwdyt5" path="res://Enemies/enemy_1.tscn" id="4_xr0ux"]
-[ext_resource type="PackedScene" uid="uid://0sjsp1wiw2qb" path="res://Enemies/eyeball.tscn" id="5_hejcr"]
+[ext_resource type="PackedScene" uid="uid://dinru1yyo7b37" path="res://Enemies/eyeball.tscn" id="5_hejcr"]
 [ext_resource type="AudioStream" uid="uid://cqymi83ggdq7q" path="res://Komiku - Cat Race Challenge.mp3" id="6_nhlpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lh4w3"]
@@ -195,4 +195,5 @@ navigation_polygon = SubResource("NavigationPolygon_08st2")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_nhlpi")
+volume_db = -21.55
 autoplay = true

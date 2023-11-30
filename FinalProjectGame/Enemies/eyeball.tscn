@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://0sjsp1wiw2qb"]
+[gd_scene load_steps=19 format=3 uid="uid://dinru1yyo7b37"]
 
 [ext_resource type="Script" path="res://Enemies/eyeball.gd" id="1_p4cbx"]
 [ext_resource type="Texture2D" uid="uid://rxjgtff8bdvq" path="res://Assets/Flying Eye 2D Pixel Art/Flying Eye 2D Pixel Art/Sprites/ATTACK.png" id="2_1yke1"]

@@ -1,9 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://rp3m5cbb3miv"]
+[gd_scene load_steps=11 format=3 uid="uid://bh86w7ug7bywi"]
 
-[ext_resource type="Texture2D" uid="uid://cle76hy5wp8od" path="res://3.png" id="1_hovqs"]
+[ext_resource type="Texture2D" path="res://3.png" id="1_hovqs"]
 [ext_resource type="PackedScene" uid="uid://deexi8mbfhmou" path="res://Levels/exit_1.tscn" id="1_u1pb3"]
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_x6gsl"]
-[ext_resource type="Texture2D" uid="uid://bmsfmcqt1cl81" path="res://4.png" id="2_dumg1"]
+[ext_resource type="Texture2D" path="res://4.png" id="2_dumg1"]
 [ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="5_xf5di"]
 [ext_resource type="AudioStream" uid="uid://dfcym3h2ft2bj" path="res://Komiku - The weekly fair.mp3" id="6_1rb3l"]
 
@@ -197,4 +197,5 @@ position = Vector2(47, 483)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_1rb3l")
+volume_db = -22.707
 autoplay = true
