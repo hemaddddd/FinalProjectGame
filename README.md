@@ -8,7 +8,7 @@ The story took place the modern day. the government is constructing a project un
 2D platformer game. 
 
 ## Impediments
-Level design, assets, 
+Level design, assets, player, enemies, music
 
 ## Implementation
 Features
@@ -21,9 +21,14 @@ https://gtkampos.itch.io/cave-tileset
 - sound effect by acebrian https://freesound.org/people/acebrian/sounds/380471/
 - music by komiku: https://freemusicarchive.org/music/Komiku/Poupis_incredible_adventures_/Komiku_-_Poupis_incredible_adventures__-_19_Cat_Race_Challenge/
 - https://freemusicarchive.org/music/Komiku/Poupis_incredible_adventures_/Komiku_-_Poupis_incredible_adventures__-_04_The_weekly_fair/
+- https://xzany.itch.io/flying-eye-2d-pixel-art/download/GNWxuu3nHORMPeZD9UEa0qXjLYK5lcEi2DYmpdnw flying eye monster enemy 
+- https://xzany.itch.io/cerberus-2d-pixel-art cerberus wold monster enemy
+- https://darkpixel-kronovi.itch.io/character-steven-free player 
 ## References
-
+Francis 
 ## Future Development
-
+Maybe add more levels and enenies and other game mechanics 
+## Game Playthrough
+- the video for the game walkthough is in the the folder FinalProjectGame in the respository 
 # Created by: Team Oout
 Josh Mom, Blane Anderson, Antony Liu, He Ma.
