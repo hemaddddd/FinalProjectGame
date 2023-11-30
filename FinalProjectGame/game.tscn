@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dv6istj3sf1e4"]
+[gd_scene load_steps=12 format=3 uid="uid://dv6istj3sf1e4"]
 
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_l417l"]
 [ext_resource type="PackedScene" uid="uid://deexi8mbfhmou" path="res://Levels/exit_1.tscn" id="2_cpch8"]
 [ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="3_h75ss"]
 [ext_resource type="PackedScene" uid="uid://gukopfwdyt5" path="res://Enemies/enemy_1.tscn" id="4_tldww"]
 [ext_resource type="PackedScene" uid="uid://0sjsp1wiw2qb" path="res://Enemies/eyeball.tscn" id="5_smxjp"]
+[ext_resource type="AudioStream" uid="uid://cqymi83ggdq7q" path="res://Komiku - Cat Race Challenge.mp3" id="6_jb0wr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bcij"]
 texture = ExtResource("1_l417l")
@@ -142,6 +143,11 @@ texture = ExtResource("1_l417l")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_307hy")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_uoexl"]
+vertices = PackedVector2Array(99, 345, 21, 339, 139, 339, 37, 402, 21, 404, 23, 353, 93, 351, 36, 431, 93, 407, 86, 430, 170, 394, 96, 395, 98, 370, 169, 363, 284, 346, 791, 478, 794, 515, 618, 515, 617, 467, 103, 419, 172, 418, 171, 435, 155, 464, 88, 457, 356, 437, 355, 419, 586, 421, 587, 438, 495, 467, 230, 481, 230, 525, 154, 527, 284, 365, 496, 515, 334, 516, 334, 482, 139, 298, 692, 295, 693, 339, 546, 345, 88, 463, 692, 363, 547, 363, 799, 397, 829, 406, 824, 478, 694, 437, 740, 374)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5, 6), PackedInt32Array(7, 3, 6, 8, 9), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(13, 12, 0, 2, 14), PackedInt32Array(15, 16, 17, 18), PackedInt32Array(9, 19, 20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27, 28), PackedInt32Array(9, 8, 19), PackedInt32Array(29, 30, 31, 22, 21), PackedInt32Array(14, 32, 13), PackedInt32Array(28, 33, 34, 35, 24), PackedInt32Array(2, 36, 37, 38, 39, 14), PackedInt32Array(22, 40, 23), PackedInt32Array(41, 42, 39, 38), PackedInt32Array(43, 44, 45, 15, 18, 46), PackedInt32Array(29, 21, 24, 35), PackedInt32Array(18, 28, 27, 46), PackedInt32Array(47, 43, 46, 41), PackedInt32Array(38, 47, 41)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(21, 339, 139, 339, 139, 298, 692, 295, 693, 339, 740, 374, 799, 397, 829, 406, 824, 478, 791, 478, 794, 515, 618, 515, 617, 467, 495, 467, 496, 515, 334, 516, 334, 482, 230, 481, 230, 525, 154, 527, 155, 464, 88, 463, 88, 457, 86, 430, 36, 431, 37, 402, 21, 404, 23, 353, 93, 351, 93, 407, 103, 419, 172, 418, 171, 435, 356, 437, 355, 419, 586, 421, 587, 438, 694, 437, 692, 363, 547, 363, 546, 345, 284, 346, 284, 365, 169, 363, 170, 394, 96, 395, 98, 370, 99, 345)])
+
 [node name="game" type="Node2D"]
 
 [node name="background" type="TileMap" parent="."]
@@ -173,3 +179,12 @@ position = Vector2(723, 490)
 
 [node name="Eyeball3" parent="." instance=ExtResource("5_smxjp")]
 position = Vector2(56, 371)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_uoexl")
+
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_jb0wr")
+autoplay = true

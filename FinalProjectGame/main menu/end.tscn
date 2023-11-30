@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpkquncdsgt4f"]
+[gd_scene load_steps=6 format=3 uid="uid://dpkquncdsgt4f"]
 
 [ext_resource type="Script" path="res://main menu/end.gd" id="1_w7j6u"]
 [ext_resource type="Texture2D" uid="uid://2ryshi5g2511" path="res://end.PNG" id="2_15rhi"]
 [ext_resource type="FontFile" uid="uid://whjeinj0y5gd" path="res://Fluox___.ttf" id="2_sfp5y"]
 [ext_resource type="Theme" uid="uid://bf1gcjax54hvg" path="res://theme/theme.tres" id="3_s0ayu"]
+[ext_resource type="AudioStream" uid="uid://dfcym3h2ft2bj" path="res://Komiku - The weekly fair.mp3" id="5_4pd21"]
 
 [node name="end" type="Control"]
 layout_mode = 3
@@ -57,6 +58,10 @@ offset_right = 980.0
 offset_bottom = 285.0
 theme = ExtResource("3_s0ayu")
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4pd21")
+autoplay = true
 
 [connection signal="pressed" from="replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
