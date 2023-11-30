@@ -24,4 +24,4 @@ https://gtkampos.itch.io/cave-tileset
 ## Future Development
 
 # Created by: Team Oout
-He Ma, Josh Mom, Blane Anderson, Antony Liu
+Josh Mom, Blane Anderson, Antony Liu. He Ma
