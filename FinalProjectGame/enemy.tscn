@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://c7yvmgaapeh2a"]
+
+[ext_resource type="Texture2D" uid="uid://brnl2x3po1ixn" path="res://Attack3.png" id="1_2gjh5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14ixc"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5isod"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0hh4"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(300, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w87nl"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(450, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7kdjw"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(600, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ht0a"]
+atlas = ExtResource("1_2gjh5")
+region = Rect2(750, 0, 150, 150)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_emm1a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_14ixc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5isod")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0hh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w87nl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7kdjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ht0a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ovf0a"]
+radius = 38.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0te5y"]
+radius = 7.0
+
+[node name="Enemy" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-5.5, -0.500001)
+scale = Vector2(0.486667, 0.486667)
+sprite_frames = SubResource("SpriteFrames_emm1a")
+frame_progress = 0.617119
+
+[node name="dectection area" type="Area2D" parent="."]
+position = Vector2(628, 493)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dectection area"]
+position = Vector2(-628, -492)
+shape = SubResource("CircleShape2D_ovf0a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0te5y")
