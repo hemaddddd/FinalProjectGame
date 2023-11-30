@@ -29,4 +29,5 @@ func set_animation(anim):
 
 func die():
 	queue_free()
+	get_tree().change_scene_to_file("res://game.tscn")
 	

@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://tvdd223kaiem"]
+[gd_scene load_steps=10 format=3 uid="uid://rp3m5cbb3miv"]
 
-[ext_resource type="Texture2D" uid="uid://cle76hy5wp8od" path="res://3.png" id="1_hovqs"]
+[ext_resource type="Texture2D" path="res://3.png" id="1_hovqs"]
+[ext_resource type="PackedScene" uid="uid://deexi8mbfhmou" path="res://Levels/exit_1.tscn" id="1_u1pb3"]
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_x6gsl"]
-[ext_resource type="Texture2D" uid="uid://bmsfmcqt1cl81" path="res://4.png" id="2_dumg1"]
+[ext_resource type="Texture2D" path="res://4.png" id="2_dumg1"]
+[ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="5_xf5di"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny6p1"]
 texture = ExtResource("1_x6gsl")
@@ -140,21 +142,43 @@ sources/0 = SubResource("TileSetAtlasSource_w0hik")
 
 [node name="fin" type="Node2D"]
 
+[node name="Exit1" parent="." instance=ExtResource("1_u1pb3")]
+position = Vector2(-264, 96)
+
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_left = 689.0
-offset_top = 255.0
-offset_right = 973.0
-offset_bottom = 464.0
+offset_top = -1.0
+offset_right = 1148.0
+offset_bottom = 448.0
 color = Color(0.945098, 0.666667, 0.705882, 1)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(830, 365.125)
-scale = Vector2(0.395833, 0.48071)
+[node name="Sprite2D2" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 15.5
+offset_right = 558.0
+offset_bottom = 366.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75, 0.697531)
 texture = ExtResource("1_hovqs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(826, 387.125)
-scale = Vector2(0.395833, 0.462191)
+[node name="Sprite2D" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 241.0
+offset_top = 252.0
+offset_right = 117.0
+offset_bottom = 173.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.75868, 0.675926)
 texture = ExtResource("2_dumg1")
 
 [node name="background" type="TileMap" parent="."]
@@ -166,3 +190,6 @@ layer_0/tile_data = PackedInt32Array(524286, 393216, 0, 589822, 393216, 0, 65535
 tile_set = SubResource("TileSet_bkekj")
 format = 2
 layer_0/tile_data = PackedInt32Array(2031616, 65536, 0, 2031617, 65536, 0, 2031618, 65536, 0, 2031619, 65536, 0, 2031620, 65536, 0, 2031621, 65536, 0, 2031622, 65536, 0, 1966087, 65536, 0, 1966088, 65536, 0, 1966089, 65536, 0, 1966090, 65536, 0, 1966091, 65536, 0, 1966092, 65536, 0, 1966093, 65536, 0, 1966094, 65536, 0, 1966095, 65536, 0, 1966096, 65536, 0, 1966097, 65536, 0, 1966098, 65536, 0, 1966099, 65536, 0, 1900564, 65536, 0, 1900565, 65536, 0, 1900566, 65536, 0, 1900567, 65536, 0, 1900568, 65536, 0, 1900569, 65536, 0, 1900570, 65536, 0, 1900571, 65536, 0, 1900572, 65536, 0, 1900573, 65536, 0, 1900574, 65536, 0, 1900575, 65536, 0, 1900576, 65536, 0, 1835041, 65536, 0, 1835042, 65536, 0, 1835043, 65536, 0, 1835044, 65536, 0, 1835045, 65536, 0, 1835046, 65536, 0, 1835047, 65536, 0, 1835048, 65536, 0, 1835049, 65536, 0, 1835050, 65536, 0, 1835051, 65536, 0, 1835052, 65536, 0, 1835053, 65536, 0, 1769518, 65536, 0, 1769519, 65536, 0, 1769520, 65536, 0, 1769521, 65536, 0, 1769522, 65536, 0, 1769523, 65536, 0, 1769524, 65536, 0, 1966080, 131072, 1, 1900544, 131072, 1, 1835008, 131072, 1, 1769473, 131072, 1, 1703937, 131072, 1, 1638401, 131072, 1, 1572865, 131072, 1, 1507330, 131072, 1, 1441794, 131072, 1, 1376258, 131072, 1, 1310722, 131072, 1, 1245187, 131072, 1, 1179651, 131072, 1, 1114115, 131072, 1, 1048579, 131072, 1, 983044, 131072, 1, 917508, 131072, 1, 851972, 131072, 1, 851973, 65536, 2, 851974, 65536, 2, 851975, 65536, 2, 851976, 65536, 2, 851977, 65536, 2, 851978, 65536, 2, 786443, 65536, 2, 786444, 65536, 2, 786445, 65536, 2, 786446, 65536, 2, 786447, 65536, 2, 786448, 65536, 2, 786449, 65536, 2, 786450, 65536, 2, 786451, 65536, 2, 786452, 65536, 2, 786453, 65536, 2, 720918, 65536, 2, 720919, 65536, 2, 720920, 65536, 2, 720921, 65536, 2, 720922, 65536, 2, 720923, 65536, 2, 720924, 65536, 2, 720925, 65536, 2, 720926, 65536, 2, 720927, 65536, 2, 720928, 65536, 2, 655393, 65536, 2, 655394, 65536, 2, 655395, 65536, 2, 655396, 65536, 2, 655397, 65536, 2, 655398, 65536, 2, 655399, 65536, 2, 655400, 65536, 2, 655401, 65536, 2, 655402, 65536, 2, 589867, 65536, 2, 589868, 65536, 2, 589869, 65536, 2, 589870, 65536, 2, 589871, 65536, 2, 589872, 65536, 2, 589873, 65536, 2, 589874, 65536, 2, 589875, 65536, 2, 589876, 65536, 2, 589877, 65536, 2, 524342, 65536, 2, 524343, 65536, 2, 524344, 65536, 2, 524345, 65536, 2, 524346, 65536, 2, 524347, 65536, 2, 1769525, 65536, 0, 1769526, 65536, 0, 1703991, 65536, 0, 1703992, 65536, 0, 1638457, 65536, 0, 1638458, 65536, 0, 1572923, 65536, 0, 1572924, 65536, 0, 589884, 0, 1, 655420, 0, 1, 720956, 0, 1, 786492, 0, 1, 852028, 0, 1, 917564, 0, 1, 983100, 0, 1, 1048636, 0, 1, 1114172, 0, 1, 1179708, 0, 1, 1245244, 0, 1, 1310780, 0, 1, 1376316, 0, 1, 1441852, 0, 1, 1507388, 0, 1)
+
+[node name="Player" parent="." instance=ExtResource("5_xf5di")]
+position = Vector2(47, 483)

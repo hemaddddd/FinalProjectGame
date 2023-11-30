@@ -8,6 +8,8 @@ func _ready():
 
 func start():
 	player.set_animation("Jump")
+	$JumpSound.play()
+	
 
 func physics_process(_delta):
 	if Input.is_action_pressed("Jump") and player.velocity.y > player.MAX_JUMP:
