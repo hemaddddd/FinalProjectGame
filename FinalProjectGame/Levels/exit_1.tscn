@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxas2x04rohse"]
+
+[ext_resource type="Script" path="res://Exit1.gd" id="1_ngasu"]
+[ext_resource type="Texture2D" uid="uid://dj5dlxx7dgqbh" path="res://New Piskel (3).png" id="2_l2wrl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xub7c"]
+size = Vector2(12, 27)
+
+[node name="Exit1" type="Area2D"]
+script = ExtResource("1_ngasu")
+
+[node name="exit1" type="Sprite2D" parent="."]
+position = Vector2(1080, 321.5)
+scale = Vector2(1, 1.8125)
+texture = ExtResource("2_l2wrl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1080, 322.5)
+shape = SubResource("RectangleShape2D_xub7c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
