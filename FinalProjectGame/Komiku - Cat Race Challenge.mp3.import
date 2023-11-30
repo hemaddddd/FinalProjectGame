@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqymi83ggdq7q"
+path="res://.godot/imported/Komiku - Cat Race Challenge.mp3-dddf676860fff85f43b3d437b1487a11.mp3str"
+
+[deps]
+
+source_file="res://Komiku - Cat Race Challenge.mp3"
+dest_files=["res://.godot/imported/Komiku - Cat Race Challenge.mp3-dddf676860fff85f43b3d437b1487a11.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

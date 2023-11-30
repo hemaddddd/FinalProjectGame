@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cklp6183xvhyb"]
+[gd_scene load_steps=12 format=3 uid="uid://cklp6183xvhyb"]
 
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_ef8p4"]
 [ext_resource type="PackedScene" uid="uid://deexi8mbfhmou" path="res://Levels/exit_1.tscn" id="2_x2a3n"]
 [ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="3_1pwko"]
 [ext_resource type="PackedScene" uid="uid://gukopfwdyt5" path="res://Enemies/enemy_1.tscn" id="4_xr0ux"]
 [ext_resource type="PackedScene" uid="uid://0sjsp1wiw2qb" path="res://Enemies/eyeball.tscn" id="5_hejcr"]
+[ext_resource type="AudioStream" uid="uid://cqymi83ggdq7q" path="res://Komiku - Cat Race Challenge.mp3" id="6_nhlpi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lh4w3"]
 texture = ExtResource("1_ef8p4")
@@ -143,6 +144,11 @@ texture = ExtResource("1_ef8p4")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_puxbx")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_08st2"]
+vertices = PackedVector2Array(608, 331, 316, 322, 334, 270, 472, 267, 501, 279, 615, 283, 664, 329, 733, 458, 881, 455, 870, 506, 710, 507, 420, 477, 327, 476, 313, 427, 474, 419, 485, 433, 1071, 60, 1094, 73, 1101, 148, 1062, 144, 980, 55, 1208, 302, 1213, 344, 1047, 340, 1170, 295, 855, 336, 744, 336, 745, 329, 1064, 166, 922, 167, 921, 153, 854, 58, 855, 39, 971, 45, 181, 188, 47, 186, 48, 97, 81, 56, 201, 155, 332, 54, 341, 74, 386, 167, 390, 149, 695, 75, 567, 131, 1095, 281, 1018, 355, 857, 358, 897, 271, 1013, 263, 1087, 262, 1167, 284, 666, 443, 729, 437, 704, 513, 483, 526, 467, 497, 565, 150, 613, 133, 902, 245, 1011, 248, 421, 492, 616, 437, 758, 151, 756, 140, 718, 56, 664, 138, 654, 277, 750, 280, 766, 262)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(0, 4, 5, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(11, 12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(25, 26, 27), PackedInt32Array(19, 28, 29, 30, 20), PackedInt32Array(30, 31, 32, 33, 20), PackedInt32Array(34, 35, 36, 37, 38), PackedInt32Array(38, 37, 39, 40), PackedInt32Array(41, 38, 40, 42), PackedInt32Array(42, 40, 43, 44), PackedInt32Array(45, 23, 46, 47, 25, 48, 49, 50), PackedInt32Array(51, 24, 23, 45), PackedInt32Array(52, 53, 7, 10, 54, 55, 56), PackedInt32Array(44, 57, 42), PackedInt32Array(58, 44, 43), PackedInt32Array(59, 60, 49, 48), PackedInt32Array(52, 56, 61, 11, 15, 62), PackedInt32Array(6, 52, 62, 0), PackedInt32Array(30, 63, 64, 31), PackedInt32Array(65, 31, 64, 66, 43), PackedInt32Array(58, 43, 66), PackedInt32Array(5, 58, 66, 67), PackedInt32Array(6, 5, 67, 68, 27), PackedInt32Array(25, 27, 68, 69, 48)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(485, 433, 474, 419, 313, 427, 327, 476, 420, 477, 421, 492, 467, 497, 483, 526, 704, 513, 710, 507, 870, 506, 881, 455, 733, 458, 729, 437, 666, 443, 664, 329, 745, 329, 744, 336, 855, 336, 857, 358, 1018, 355, 1047, 340, 1213, 344, 1208, 302, 1170, 295, 1167, 284, 1095, 281, 1087, 262, 1013, 263, 1011, 248, 902, 245, 897, 271, 766, 262, 750, 280, 654, 277, 664, 138, 756, 140, 758, 151, 921, 153, 922, 167, 1064, 166, 1062, 144, 1101, 148, 1094, 73, 1071, 60, 980, 55, 971, 45, 855, 39, 854, 58, 718, 56, 695, 75, 341, 74, 332, 54, 81, 56, 48, 97, 47, 186, 181, 188, 201, 155, 386, 167, 390, 149, 565, 150, 567, 131, 613, 133, 615, 283, 501, 279, 472, 267, 334, 270, 316, 322, 608, 331, 616, 437)])
+
 [node name="level 3" type="Node2D"]
 metadata/_edit_horizontal_guides_ = []
 
@@ -169,31 +175,24 @@ position = Vector2(969, 164)
 position = Vector2(490, 644)
 
 [node name="Enemy3" parent="." instance=ExtResource("4_xr0ux")]
-visible = false
 position = Vector2(804, 340)
 
 [node name="Eyeball" parent="." instance=ExtResource("5_hejcr")]
-visible = false
 position = Vector2(108, 108)
 
 [node name="Eyeball2" parent="." instance=ExtResource("5_hejcr")]
-visible = false
 position = Vector2(1048, 87)
 
-[node name="Eyeball3" parent="." instance=ExtResource("5_hejcr")]
-visible = false
-position = Vector2(640, 216)
-
-[node name="Eyeball4" parent="." instance=ExtResource("5_hejcr")]
-visible = false
-position = Vector2(81, 497)
-
-[node name="Eyeball5" parent="." instance=ExtResource("5_hejcr")]
-visible = false
-position = Vector2(776, 547)
-
 [node name="Eyeball6" parent="." instance=ExtResource("5_hejcr")]
-position = Vector2(1164, 404)
+position = Vector2(1115, 299)
 
 [node name="Eyeball7" parent="." instance=ExtResource("5_hejcr")]
-position = Vector2(530, 453)
+position = Vector2(394, 286)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_08st2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_nhlpi")
+autoplay = true

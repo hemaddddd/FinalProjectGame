@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var player = null
 @onready var ray = $See
-@export var speed = 800
+@export var speed = 50
 @export var looking_speed = 100
 var nav_ready = false
 var initial_position = Vector2.ZERO
@@ -25,7 +25,9 @@ func nav_setup():
 	nav_ready = true
 
 func _physics_process(_delta):
-	player = get_node_or_null("/root/Game/Player_Container/Player")
+	var ro = get_node("/root")
+	var player = ro.get_child(ro.get_child_count()-1).get_node("Player")
+#	player = get_node_or_null("/root/Player/Player")
 	var s = looking_speed
 	var points = initial_position
 	if player != null and nav_ready:
