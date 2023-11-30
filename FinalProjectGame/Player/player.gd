@@ -25,3 +25,8 @@ func set_animation(anim):
 	if $AnimatedSprite2D.animation == anim: return
 	if $AnimatedSprite2D.sprite_frames.has_animation(anim): $AnimatedSprite2D.play(anim)
 	else: $AnimatedSprite2D.play()
+
+
+func die():
+	queue_free()
+	
