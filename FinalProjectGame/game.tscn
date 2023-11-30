@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv6istj3sf1e4"]
+[gd_scene load_steps=8 format=3 uid="uid://dv6istj3sf1e4"]
 
 [ext_resource type="Texture2D" uid="uid://cs1huwb4bawhc" path="res://Tileset_Cave.png" id="1_l417l"]
 [ext_resource type="Texture2D" uid="uid://dj5dlxx7dgqbh" path="res://New Piskel (3).png" id="2_an061"]
+[ext_resource type="PackedScene" uid="uid://cm2g7um53ffxb" path="res://player.tscn" id="3_h75ss"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4bcij"]
 texture = ExtResource("1_l417l")
@@ -154,9 +155,14 @@ layer_0/tile_data = PackedInt32Array(0, 196608, 0, 1, 65536, 2, 2, 65536, 2, 3, 
 [node name="Exit1" type="Area2D" parent="."]
 
 [node name="exit1" type="Sprite2D" parent="Exit1"]
-position = Vector2(1080, 328)
+position = Vector2(1080, 321.5)
+scale = Vector2(1, 1.8125)
 texture = ExtResource("2_an061")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit1"]
-position = Vector2(1080, 328)
+position = Vector2(1080, 322)
+scale = Vector2(1, 1.82813)
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 7.9, -8)
+
+[node name="Player" parent="." instance=ExtResource("3_h75ss")]
+position = Vector2(50, 116)
